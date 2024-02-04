@@ -1,0 +1,16 @@
+<div *ngIf="isLoggedIn()">
+  <div class="container"> Hi and welcome</div>
+  <div class="container">Name: {{userInfo?.info?.name}}</div>
+  <div class="container">Email: {{userInfo?.info?.email}}</div>
+  <div class="container"><img src="{{userInfo?.info?.picture}}"></div>
+
+  <div class="container">
+    <button (click)="getEmails()">Get Gmails</button>
+  </div>
+  <div class="container" *ngFor="let mail of mailSnippets">{{mail}}<br><br></div>
+  <div class="container">
+    <button (click)="logOut()">
+      Log Out from Google
+    </button>
+  </div>
+</div>
